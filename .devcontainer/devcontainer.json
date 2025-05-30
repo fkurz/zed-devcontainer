@@ -1,0 +1,14 @@
+{
+  "name": "friedrichkurz.me/zed-devcontainer",
+  "image": "friedrichkurz.me/zed-devcontainer",
+  "overrideCommand": false,
+  "runArgs": ["--network=host", "--name=zed-devcontainer"],
+  "forwardPorts": [65432],
+  "mounts": [
+    {
+      "source": "${localWorkspaceFolder}",
+      "target": "/workspace",
+      "type": "bind"
+    }
+  ]
+}
