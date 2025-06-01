@@ -13,6 +13,8 @@ docker build \
     .
 ```
 
+> (i) The image architecture largely follows [my previous project][3].
+
 ## Create SSH config entry
 
 ```conf
@@ -42,6 +44,8 @@ devcontainer --workspace-folder=. up
 > When prompted, enter the SSH user's password (`zed` in this case).
 > The expected output is the name of the SSH user configured in the OpenSSH configuration (i.e. `zed`).
 
+> (i) More on Devcontainer [on the offical website][2].
+
 ## Connecting to the running devcontainer with SSH
 
 ```bash
@@ -57,3 +61,9 @@ zed ssh://zeddevcon/workspace
 ```
 
 This will automatically open a Zed editor window, connect over SSH (on the first login, Zed will also install the editor backend in the container), and change directory to the `/workspace` folder (where we mounted the current working directory).
+
+> (i) More on Zed remote development [in the official documentation][1].
+
+[1]: https://zed.dev/docs/remote-development
+[2]: https://containers.dev/
+[3]: https://github.com/fkurz/devcontainer-ssh
