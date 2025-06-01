@@ -28,4 +28,4 @@ PrintMotd no
 # Allow client to pass locale environment variables
 AcceptEnv LANG LC_*
 
-AllowUsers ${THE_CONTAINER_USER_NAME}
+AllowUsers ${THE_USER_NAME}

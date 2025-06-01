@@ -1,14 +1,14 @@
 {
-  "name": "friedrichkurz.me/zed-devcontainer",
-  "image": "friedrichkurz.me/zed-devcontainer",
-  "overrideCommand": false,
-  "runArgs": ["--network=host", "--name=zed-devcontainer"],
-  "forwardPorts": [65432],
-  "mounts": [
-    {
-      "source": "${localWorkspaceFolder}",
-      "target": "/workspace",
-      "type": "bind"
-    }
-  ]
+    "name": "friedrichkurz.me/zeddevcon",
+    "image": "friedrichkurz.me/zeddevcon",
+    "overrideCommand": false,
+    "runArgs": ["--network=host", "--name=zeddevcon"],
+    "forwardPorts": [2022],
+    "mounts": [
+        {
+            "source": "${localWorkspaceFolder}",
+            "target": "/workspace",
+            "type": "bind"
+        }
+    ]
 }
