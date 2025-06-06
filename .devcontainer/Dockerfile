@@ -6,6 +6,7 @@ ARG THE_USER_NAME
 ARG THE_USER_PASSWORD
 ARG THE_USER_UID
 ARG THE_SSH_PORT
+ARG THE_GIT_VERSION="1:2.43.0-1ubuntu7.2"
 
 COPY "./.devcontainer/sshd_config.template" "/tmp/sshd_config.template"
 
@@ -30,6 +31,9 @@ cat /tmp/sshd_config.template \
 apt-get remove --yes gettext-base
 rm /tmp/sshd_config.template
 command -v sshd
+# Install Git
+apt-get install --yes git="$THE_GIT_VERSION"
+git --version
 EOF
 
 ENTRYPOINT ["/usr/sbin/sshd", "-D"]

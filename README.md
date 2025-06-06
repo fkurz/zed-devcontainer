@@ -6,7 +6,7 @@
 
 ```bash
 docker build \
-    --tag zeddevcon \
+    --tag friedrichkurz.me/zeddevcon \
     --file .devcontainer/Dockerfile \
     --build-arg="THE_USER_NAME=zed" \
       --build-arg="THE_USER_PASSWORD=zed" \
@@ -75,6 +75,12 @@ zed ssh://zeddevcon/workspace
 ```
 
 This will automatically open a Zed editor window, connect over SSH (on the first login, Zed will also install the editor backend in the container), and change directory to the `/workspace` folder (where we mounted the current working directory).
+
+Zed also provides the very convenient option to directly pass the user and password in the connection URL. So, if you're looking to open a Zed editor window and directly authenticate, invoke the Zed CLI as follows:
+
+```bash
+zed ssh://zed:zed@zeddevcon/workspace
+```
 
 > (i) More on Zed remote development [in the official documentation][1].
 

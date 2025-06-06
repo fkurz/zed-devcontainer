@@ -1,14 +1,14 @@
 {
-  "name": "zeddevcon",
-  "image": "zeddevcon",
-  "overrideCommand": false,
-  "runArgs": ["--network=host", "--name=zeddevcon"],
-  "forwardPorts": [2022],
-  "mounts": [
-    {
-      "source": "${localWorkspaceFolder}",
-      "target": "/workspace",
-      "type": "bind"
-    }
-  ]
+    "name": "zeddevcon",
+    "image": "friedrichkurz.me/zeddevcon",
+    "overrideCommand": false,
+    "runArgs": ["--network=host", "--name=zeddevcon"],
+    "forwardPorts": [2022],
+    "mounts": [
+        {
+            "source": "${localWorkspaceFolder}",
+            "target": "/workspace",
+            "type": "bind"
+        }
+    ]
 }
